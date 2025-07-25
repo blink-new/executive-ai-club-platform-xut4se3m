@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neomorphic color scheme with gold accents */
+    --background: 220 14% 96%;
+    --foreground: 220 9% 46%;
+    --card: 220 14% 96%;
+    --card-foreground: 220 9% 46%;
+    --popover: 220 14% 96%;
+    --popover-foreground: 220 9% 46%;
+    --primary: 220 13% 91%;
+    --primary-foreground: 220 9% 46%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 9% 46%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    --radius: 0.75rem;
+    
+    /* Neomorphic shadows */
+    --shadow-light: 220 43% 98%;
+    --shadow-dark: 220 14% 83%;
+    
+    /* Gold accent */
+    --gold: 43 96% 56%;
+    --gold-foreground: 0 0% 98%;
+    
+    /* Sidebar */
+    --sidebar-background: 220 14% 96%;
+    --sidebar-foreground: 220 9% 46%;
+    --sidebar-primary: 220 13% 91%;
+    --sidebar-primary-foreground: 220 9% 46%;
+    --sidebar-accent: 220 13% 91%;
+    --sidebar-accent-foreground: 220 9% 46%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 220 27% 18%;
+    --foreground: 220 9% 46%;
+    --card: 220 27% 18%;
+    --card-foreground: 220 9% 46%;
+    --popover: 220 27% 18%;
+    --popover-foreground: 220 9% 46%;
+    --primary: 220 23% 22%;
+    --primary-foreground: 220 9% 46%;
+    --secondary: 220 27% 18%;
+    --secondary-foreground: 220 9% 46%;
+    --muted: 220 23% 22%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 23% 22%;
+    --input: 220 23% 22%;
+    --ring: 217 91% 60%;
+    
+    /* Dark mode neomorphic shadows */
+    --shadow-light: 220 31% 25%;
+    --shadow-dark: 220 27% 12%;
+    
+    /* Sidebar dark */
+    --sidebar-background: 220 27% 18%;
+    --sidebar-foreground: 220 9% 46%;
+    --sidebar-primary: 220 23% 22%;
+    --sidebar-primary-foreground: 220 9% 46%;
+    --sidebar-accent: 220 23% 22%;
+    --sidebar-accent-foreground: 220 9% 46%;
+    --sidebar-border: 220 23% 22%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Neomorphic utilities */
+  .neo-inset {
+    box-shadow: 
+      inset 4px 4px 8px hsl(var(--shadow-dark)),
+      inset -4px -4px 8px hsl(var(--shadow-light));
+  }
+  
+  .neo-outset {
+    box-shadow: 
+      4px 4px 8px hsl(var(--shadow-dark)),
+      -4px -4px 8px hsl(var(--shadow-light));
+  }
+  
+  .neo-flat {
+    box-shadow: 
+      2px 2px 4px hsl(var(--shadow-dark)),
+      -2px -2px 4px hsl(var(--shadow-light));
+  }
+  
+  .neo-pressed {
+    box-shadow: 
+      inset 2px 2px 4px hsl(var(--shadow-dark)),
+      inset -2px -2px 4px hsl(var(--shadow-light));
+  }
+  
+  .gold-accent {
+    border-color: hsl(var(--gold));
+  }
+  
+  .gold-glow {
+    box-shadow: 
+      0 0 10px hsl(var(--gold) / 30%),
+      4px 4px 8px hsl(var(--shadow-dark)),
+      -4px -4px 8px hsl(var(--shadow-light));
+  }
+}
